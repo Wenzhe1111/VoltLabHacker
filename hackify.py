@@ -1,5 +1,5 @@
 import numpy as np
-
+import time
 
 def getCombo(multiplier) -> list:
     result = [[multiplier[0], multiplier[1], multiplier[2]], [multiplier[0], multiplier[2], multiplier[1]],
@@ -10,28 +10,27 @@ def getCombo(multiplier) -> list:
 
 
 def hackify():
-    confirm = False
-
-    while not confirm:
-
+    
+    exit = False
+    while not exit:
         nums = input("Please enter numbers:\n")
-        multiplier = input("Please enter multiplicators:\n")
+        multiplier = input("Please enter multiplier:\n")
         target = input("Please enter the target number:\n")
-        print("The numbers are ", nums)
-        print("The multiplicators are ", multiplier)
-        print("The target is ", target)
-        io = input("Please confirm the results by pressing y:\n")
-        if io == "y":
-            confirm = True
-    nums = list(map(int, nums.split(" ")))
-    multiplier = list(map(int, multiplier.split(" ")))
-    target = int(target)
-    for m in getCombo(multiplier):
-        result = np.dot(nums, np.transpose(m))
-        if result == target:
-            for i in range(len(nums)):
-                print(nums[i], "---->", m[i])
-            break
 
+        nums = list(map(int, nums.split(" ")))
+        multiplier = list(map(int, multiplier.split(" ")))
+        target = int(target)
+        
+        for m in getCombo(multiplier):
+            result = np.dot(nums, np.transpose(m))
+            if result == target:
+                exit = True
+                for i in range(len(nums)):
+                    print(nums[i], "---->", m[i])
+                time.sleep(15)
+                break
+        if not find:
+            print("Please check your input numbers, result DNE")
+    
 
 hackify()
