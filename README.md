@@ -3,11 +3,15 @@ Hack the VoltLab in Cayo-Perico heist prep
 
 Welcome to use Voltlab Hacker!
 
+Before running the program, make sure you have installed numpy
+
+C:\Users\Wenzhe>pip install numpy
+
 Running the hackify.py in the cmd shell (Press Win+R, type cmd, click confirm)
 
-Using the command: python3 hackify.py
+Using the command: python hackify.py
 
-C:\Users\Wenzhe>python3 hackify.py
+C:\Users\Wenzhe\desktop>python hackify.py
 
 Firstly, enter numbers separated by one space and press ENTER to the next operation.
 
