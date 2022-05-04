@@ -25,8 +25,9 @@ def hackify():
             result = np.dot(nums, np.transpose(m))
             if result == target:
                 exit = True
-                for i in range(len(nums)):
-                    print(nums[i], "---->", m[i])
+                print(nums[0], "--->", m[0])
+                print(nums[1], "--->", m[1])
+                print(nums[2], "--->", m[2])
                 time.sleep(15)
                 break
         if not find:
